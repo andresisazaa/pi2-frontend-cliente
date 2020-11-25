@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <app-order-status></app-order-status>
+      <app-product-searcher></app-product-searcher>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let product of menu">
+          <app-product-list-item
+            [product]="product"
+            (selectProduct)="handleOrderProduct($event)"
+          ></app-product-list-item>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

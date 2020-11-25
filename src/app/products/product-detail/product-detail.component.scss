@@ -1,0 +1,25 @@
+.product-detail {
+  &__name {
+    color: #f52f41;
+    font-weight: bolder;
+  }
+  &__image {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  &__price {
+    font-weight: bolder;
+  }
+  &__category {
+    font-size: 1rem;
+  }
+
+  &__picker {
+    width: 50%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+  }
+}
