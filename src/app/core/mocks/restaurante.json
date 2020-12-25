@@ -1,0 +1,88 @@
+{
+  "id": 1,
+  "name": "McDonald's",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/3/36/McDonald%27s_Golden_Arches.svg",
+  "categories": ["Pollo", "Hamburguesas", "Postres", "Bebidas"],
+  "products": [
+    {
+      "id": 1,
+      "name": "Club House",
+      "price": 20000,
+      "description": "Whole Chicken Marinated in PERi-PERi Sauce and Grilled",
+      "image": "https://d25dk4h1q4vl9b.cloudfront.net/media/images/menu-content/CO/sandwiches-de-carne/clubhouse_sello_co.png",
+      "category": "Hamburguesas"
+    },
+    {
+      "id": 2,
+      "name": "Doble Magnifica",
+      "price": 25000,
+      "description": "Whole Chicken Marinated in PERi-PERi Sauce and Grilled",
+      "image": "https://d25dk4h1q4vl9b.cloudfront.net/media/images/menu-content/CO/sandwiches/doble_magnifica_sello_co.png",
+      "category": "Hamburguesas"
+    },
+    {
+      "id": 3,
+      "name": "Big Mac",
+      "price": 30000,
+      "description": "Whole Chicken Marinated in PERi-PERi Sauce and Grilled",
+      "image": "https://d25dk4h1q4vl9b.cloudfront.net/media/images/menu-content/CO/sandwiches-de-carne/big_mac_sello_co.png",
+      "category": "Hamburguesas"
+    },
+    {
+      "id": 4,
+      "name": "Sundae More",
+      "price": 5000,
+      "description": "Whole Chicken Marinated in PERi-PERi Sauce and Grilled",
+      "image": "https://d25dk4h1q4vl9b.cloudfront.net/media/images/menu-content/CO/postres/sundae-mora.png",
+      "category": "Postres"
+    },
+    {
+      "id": 5,
+      "name": "McFlurry Oreo",
+      "price": 7000,
+      "description": "Whole Chicken Marinated in PERi-PERi Sauce and Grilled",
+      "image": "https://d25dk4h1q4vl9b.cloudfront.net/media/images/menu-content/CO/postres/mc_flurry_oreo.png",
+      "category": "Postres"
+    },
+    {
+      "id": 6,
+      "name": "McFlurry M&M's",
+      "price": 7000,
+      "description": "Whole Chicken Marinated in PERi-PERi Sauce and Grilled",
+      "image": "https://d25dk4h1q4vl9b.cloudfront.net/media/images/menu-content/CO/postres/McFlurry_mm_new_co.png",
+      "category": "Postres"
+    },
+    {
+      "id": 7,
+      "name": "Nuggets de Pollo 10 unidades",
+      "price": 20000,
+      "description": "Whole Chicken Marinated in PERi-PERi Sauce and Grilled",
+      "image": "https://d25dk4h1q4vl9b.cloudfront.net/media/images/menu-content/CO/pollo/mcnuggets_x_10_sello_co.png",
+      "category": "Pollo"
+    },
+    {
+      "id": 8,
+      "name": "Medio Pollo",
+      "price": 25000,
+      "description": "Whole Chicken Marinated in PERi-PERi Sauce and Grilled",
+      "image": "https://d25dk4h1q4vl9b.cloudfront.net/media/images/menu-content/CO/pollo-crocante/medio_pollo_sello_co.png",
+      "category": "Pollo"
+    },
+    {
+      "id": 9,
+      "name": "Pollo Entero",
+      "price": 40000,
+      "description": "Whole Chicken Marinated in PERi-PERi Sauce and Grilled",
+      "image": "https://d25dk4h1q4vl9b.cloudfront.net/media/images/menu-content/CO/pollo-crocante/1_pollo_sello_co.png",
+      "category": "Pollo"
+    },
+    {
+      "id": 10,
+      "name": "Jugo de Naranja",
+      "price": 5000,
+      "description": "Whole Chicken Marinated in PERi-PERi Sauce and Grilled",
+      "image": "https://d25dk4h1q4vl9b.cloudfront.net/media/images/menu-content/CO/bebidas/jugo-de-naranja_v2.png",
+      "category": "Bebidas"
+    }
+  ]
+}

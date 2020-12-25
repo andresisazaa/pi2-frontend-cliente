@@ -5,5 +5,10 @@ const selectFeature = createFeatureSelector<ProductsState>('productos');
 
 export const productsSelect = createSelector(
   selectFeature,
-  (state: ProductsState) => state.items
+  (state: ProductsState) => state.products
+);
+
+export const productSelect = createSelector(
+  selectFeature,
+  (state: ProductsState) => state.product
 );

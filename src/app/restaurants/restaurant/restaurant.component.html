@@ -1,0 +1,9 @@
+<div class="restaurant" *ngIf="restaurant">
+  <h2 class="restaurant__name">{{ restaurant.name }}</h2>
+  <img
+    class="restaurante__image"
+    [src]="restaurant.image"
+    [alt]="restaurant.name"
+  />
+</div>
+<router-outlet></router-outlet>

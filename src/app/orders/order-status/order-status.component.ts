@@ -9,17 +9,17 @@ import { Order } from 'src/app/core/models/order.model';
 export class OrderStatusComponent implements OnInit {
   order: Order = {
     id: 1,
-    items: [
+    products: [
       {
         productName: 'Hamburguesa',
-        productId: '1',
+        productId: 1,
         quantity: 3,
         value: 60000,
         description: 'Cualquier cosa',
       },
       {
         productName: 'Hot Dog',
-        productId: '2',
+        productId: 2,
         quantity: 1,
         value: 20000,
         description: 'Cualquier cosa',

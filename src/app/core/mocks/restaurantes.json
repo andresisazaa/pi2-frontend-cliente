@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Mac Donals",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/36/McDonald%27s_Golden_Arches.svg",
+    "productTypes": ["Pollo", "Hamburguesas", "Helados"]
+  },
+  {
+    "id": 2,
+    "name": "Frisby",
+    "image": "https://img.pystatic.com/restaurants/domi_41100.jpg",
+    "productTypes": ["Pollo"]
+  },
+  {
+    "id": 3,
+    "name": "Tonino Pizza",
+    "image": "https://img.pystatic.com/restaurants/pizza-tonino.jpeg",
+    "productTypes": ["Pizza"]
+  },
+  {
+    "id": 4,
+    "name": "Los Verdes",
+    "image": "https://img.pystatic.com/restaurants/logo-nuevo-los-verdes-02.jpg",
+    "productTypes": ["Hamburguesas", "Carnes", "Perros"]
+  },
+  {
+    "id": 5,
+    "name": "Kokoriko",
+    "image": "https://img.pystatic.com/restaurants/domi_1996.jpg",
+    "productTypes": ["Pollo"]
+  }
+]

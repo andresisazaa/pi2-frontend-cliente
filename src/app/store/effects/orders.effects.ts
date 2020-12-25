@@ -10,6 +10,7 @@ import {
   fetchOrderFailed,
   createOrderSuccess,
   createOrder,
+  createOrderFailed,
 } from '../actions/orders.actions';
 import { Action } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
@@ -17,7 +18,7 @@ import { OrderService } from 'src/app/core/services/order/order.service';
 import { Order } from 'src/app/core/models/order.model';
 
 @Injectable()
-export class ProductsEffects {
+export class OrdersEffects {
   constructor(private actions$: Actions, private orderService: OrderService) {}
 
   fetchOrders$: Observable<Action> = createEffect(() =>
@@ -53,7 +54,7 @@ export class ProductsEffects {
       ofType(createOrder),
       mergeMap(({ productsToOrder }) => {
         const order: Order = {
-          items: productsToOrder,
+          products: productsToOrder,
           date: new Date(),
         };
         return this.orderService.createOrder(order).pipe(
@@ -61,7 +62,7 @@ export class ProductsEffects {
             createOrderSuccess({ order: orderCreated })
           ),
           catchError((error: string) =>
-            of(fetchOrderFailed({ errorMessage: error }))
+            of(createOrderFailed({ errorMessage: error }))
           )
         );
       })

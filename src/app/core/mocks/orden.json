@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "productId": 1,
+      "productName": "Club House",
+      "quantity": 2,
+      "description": "Sin Cebolla"
+    },
+    {
+      "productId": 3,
+      "productName": "Big Mac",
+      "quantity": 3,
+      "description": "Sin Salsas"
+    },
+    {
+      "productId": 2,
+      "productName": "Doble Magnific",
+      "quantity": 2,
+      "description": "Sin Cebolla"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
+<a routerLink=".." class="btn btn-outline-secondary m-4">
+  <i class="fa fa-chevron-left" aria-hidden="true"></i>
+</a>
 <article *ngIf="product" class="product-detail container">
-  <a routerLink="/productos" class="btn btn-outline-secondary my-4">
-    <i class="fa fa-chevron-left" aria-hidden="true"></i>
-  </a>
   <img
     class="product-detail__image"
     [src]="product.image"
@@ -16,27 +16,33 @@
   </h4>
   <p class="product-detail__description">{{ product.description }}</p>
   <hr />
-
-  <div class="product-detail__picker">
-    <div class="btn-group">
-      <button class="btn btn-primary" (click)="removeProduct()">-</button>
-      <button class="btn btn-primary px-3" disabled>
-        {{ selectedQuantity }}
-      </button>
-      <button class="btn btn-primary" (click)="addProduct()">+</button>
+  <form [formGroup]="productForm" (ngSubmit)="submit()">
+    <div class="product-detail__picker">
+      <div class="btn-group">
+        <button class="btn btn-primary" type="button" (click)="removeProduct()">
+          -
+        </button>
+        <button class="btn btn-primary px-3" type="button" disabled>
+          {{ quantity.value }}
+        </button>
+        <button class="btn btn-primary" type="button" (click)="addProduct()">
+          +
+        </button>
+      </div>
     </div>
-  </div>
 
-  <textarea
-    class="w-100"
-    placeholder="Agregue detalles o aclaraciones de su producto"
-    rows="4"
-  ></textarea>
-  <button
-    class="btn btn-primary btn-block"
-    (click)="orderProduct()"
-    [disabled]="!hasSelectedProducts"
-  >
-    Agregar al pedido ({{ total | currency: "COP":"symbol-narrow":"1.0-0" }})
-  </button>
+    <textarea
+      [formControl]="details"
+      class="w-100"
+      placeholder="Agregue detalles o aclaraciones de su producto"
+      rows="4"
+    ></textarea>
+    <button
+      class="btn btn-primary btn-block"
+      type="submit"
+      [disabled]="productForm.invalid"
+    >
+      Agregar al pedido ({{ total | currency: "COP":"symbol-narrow":"1.0-0" }})
+    </button>
+  </form>
 </article>

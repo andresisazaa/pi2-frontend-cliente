@@ -2,7 +2,7 @@ import { OrderItem } from './order-item.model';
 
 export interface Order {
   id?: number;
-  items?: OrderItem[];
+  products?: OrderItem[];
   status?: string;
   date?: Date;
   value?: number;
