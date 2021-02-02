@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store, select } from '@ngrx/store';
 import { Subscription } from 'rxjs';
@@ -12,7 +12,7 @@ import { orderSelect } from 'src/app/store/selectors/orders.selectors';
   templateUrl: './order-status.component.html',
   styleUrls: ['./order-status.component.scss'],
 })
-export class OrderStatusComponent implements OnInit {
+export class OrderStatusComponent implements OnInit, OnDestroy {
 
   subscription: Subscription;
   order: Order;
@@ -26,4 +26,13 @@ export class OrderStatusComponent implements OnInit {
         this.order = order       
       });
   }
+  
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+
+  viewDetail(): void {
+    this.router.navigate(['pedidos', this.order.id]);
+  }
+
 }

@@ -1,1 +1,15 @@
-<p>order-detail works!</p>
+<div class="restaurant" *ngIf="order">
+    <h2 class="product-detail__name">Estado: {{ order.estado }}</h2>
+    <h3 class="product-detail__category badge badge-primary">
+        {{ order.fecha }}
+    </h3>
+    <h3 class="product-detail__price">
+        Total: {{ order.total | currency: "COP":"symbol-narrow":"1.0-0" }}
+    </h3>
+    <!-- <app-product-searcher></app-product-searcher> -->
+    <ul class="list-group my-4">
+        <li class="list-group-item" *ngFor="let product of products">
+            <app-product-list-item [product]="product"> </app-product-list-item>
+        </li>
+    </ul>
+</div>

@@ -14,9 +14,10 @@ const routes: Routes = [
     children: [
       { path: '', component: OrderListComponent },
       { path: 'mi-pedido', component: CurrentOrderComponent },
+      { path: 'mi-orden', component: OrderStatusComponent},
       {
         path: ':id',
-        component: OrderStatusComponent,
+        component: OrderDetailComponent,
         loadChildren: () =>
           import('../orders/orders.module').then((m) => m.OrdersModule),
       },
