@@ -3,7 +3,7 @@ import { Restaurant } from 'src/app/core/models/restaurant.model';
 import { State } from 'src/app/store/states/app.state';
 import { Store, select } from '@ngrx/store';
 import { fetchRestaurants } from 'src/app/store/actions/restaurants.actions';
-import { restaurantsSelect } from 'src/app/store/selectors/restaurants.selectors';
+import { restaurantsSearchSelect, restaurantsSelect } from 'src/app/store/selectors/restaurants.selectors';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -18,12 +18,23 @@ export class RestaurantsListComponent implements OnInit {
 
   ngOnInit(): void {
     this.subscribeToRestaurants();
+    this.subscribeToRestaurantsSearch();
     this.store.dispatch(fetchRestaurants());
   }
 
   subscribeToRestaurants(): void {
     this.subscription = this.store
       .pipe(select(restaurantsSelect))
-      .subscribe((restaurants) => (this.restaurants = restaurants));
+      .subscribe((restaurants) => {
+        this.restaurants = restaurants;
+      });
+  }
+
+  subscribeToRestaurantsSearch(): void {
+    this.subscription = this.store
+      .pipe(select(restaurantsSearchSelect))
+      .subscribe((restaurants) => {       
+        this.restaurants = restaurants;
+      });
   }
 }

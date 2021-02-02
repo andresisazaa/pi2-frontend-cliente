@@ -35,7 +35,7 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.productId = Number(this.route.snapshot.paramMap.get('id'));
-    this.store.dispatch(fetchProduct({ productId: this.productId }));
+    // this.store.dispatch(fetchProduct({ productId: this.productId }));
     this.subscription = this.store
       .pipe(select(productSelect))
       .subscribe((product: Product) => {

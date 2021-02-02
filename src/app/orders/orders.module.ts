@@ -7,6 +7,7 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
 import { OrdersRoutingModule } from './orders.routes';
 import { CurrentOrderComponent } from './current-order/current-order.component';
 import { OrderStatusComponent } from './order-status/order-status.component';
+import { OrderWindowComponent } from './order-window/order-window.component';
 
 @NgModule({
   declarations: [
@@ -16,8 +17,9 @@ import { OrderStatusComponent } from './order-status/order-status.component';
     OrderDetailComponent,
     CurrentOrderComponent,
     OrderStatusComponent,
+    OrderWindowComponent,
   ],
   imports: [CommonModule, OrdersRoutingModule],
-  exports: [CurrentOrderComponent, OrderStatusComponent],
+  exports: [CurrentOrderComponent, OrderStatusComponent, OrderWindowComponent],
 })
 export class OrdersModule {}

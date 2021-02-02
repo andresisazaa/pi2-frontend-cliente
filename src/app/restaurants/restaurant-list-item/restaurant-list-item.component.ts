@@ -14,8 +14,8 @@ export class RestaurantListItemComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  get productTypes(): string {
-    return this.restaurant.productTypes.join(', ');
+  get categories(): string {
+    return this.restaurant.categories.join(', ');
   }
 
   selectRestaurant(): void {

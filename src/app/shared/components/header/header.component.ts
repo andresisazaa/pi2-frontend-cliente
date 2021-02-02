@@ -12,6 +12,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {}
 
   viewProductsSelected(): void {
-    this.router.navigate(['ordenes/mi-orden']);
+    this.router.navigate(['pedidos/mi-orden']);
   }
 }

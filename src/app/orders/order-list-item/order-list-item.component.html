@@ -1,1 +1,7 @@
-<p>order-list-item works!</p>
+<div class="order">
+  <p class="order__id"><span>Pedido:</span> {{ order.id }}</p>
+  <p class="order__value">
+    <span>Valor:</span> {{ order.value | currency: "COP":"symbol-narrow":"1.0-0" }}
+  </p>
+  <p class="order__status"><span>Estado:</span> {{ order.status }}</p>
+</div>

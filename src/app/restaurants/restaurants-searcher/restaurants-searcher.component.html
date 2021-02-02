@@ -1,2 +1,9 @@
-<input type="text" placeholder="Busca un restaurante..." />
-<button>Buscar</button>
+<div class="restaurant-searcher">
+  <input
+    class="form-control m-1"
+    type="text"
+    placeholder="Busca un restaurante..."
+    (input)="searchRestaurant(restuarantInput.value)"
+    #restuarantInput
+  />
+</div>

@@ -15,5 +15,11 @@ export const restaurantSelect = createSelector(
 
 export const productsByRestaurantSelect = createSelector(
   selectFeature,
-  (state: RestaurantsState) => state.restaurant.products
+  (state: RestaurantsState) => state.restaurant.products 
+);
+
+
+export const restaurantsSearchSelect = createSelector(
+  selectFeature,
+  (state: RestaurantsState) => state.restaurantsSearh
 );

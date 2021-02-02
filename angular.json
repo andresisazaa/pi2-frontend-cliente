@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "pi2-frontend-cliente"
+    }
+  },
+  "defaultProject": "pi2-frontend-cliente",
+  "cli": {
+    "analytics": false
+  }
 }

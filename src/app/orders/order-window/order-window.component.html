@@ -1,0 +1,5 @@
+<div (click)="goToOrder()" class="order-window" *ngIf="products.length > 0">
+  <p class="order-window__text">
+    Tu pedido en curso: {{ totalValue | currency: "COP":"symbol-narrow":"1.0-0" }}
+  </p>
+</div>

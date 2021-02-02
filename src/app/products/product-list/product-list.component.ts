@@ -4,8 +4,12 @@ import { State } from 'src/app/store/states/app.state';
 import { Subscription } from 'rxjs';
 import { Product } from 'src/app/core/models/product.model';
 import { Router, ActivatedRoute } from '@angular/router';
-import { restaurantSelect } from 'src/app/store/selectors/restaurants.selectors';
+import {
+  productsByRestaurantSelect,
+  restaurantSelect,
+} from 'src/app/store/selectors/restaurants.selectors';
 import { Restaurant } from 'src/app/core/models/restaurant.model';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-product-list',
@@ -26,6 +30,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     this.subscription.add(this.subscribeToMenu());
+    // this.subscription.add(this.subscribeToProductsSearch());
   }
 
   handleSelectProduct(productToOrder: Product): void {
@@ -38,6 +43,17 @@ export class ProductListComponent implements OnInit {
       .subscribe((restaurant: Restaurant) => {
         if (restaurant) {
           this.products = restaurant.products;
+        }
+      });
+  }
+
+  subscribeToProductsSearch(): Subscription {
+    return this.store
+      .pipe(select(productsByRestaurantSelect))
+      .pipe(filter((products) => Boolean(products)))
+      .subscribe((products: Product[]) => {
+        if (this.products) {
+          this.products = products;
         }
       });
   }

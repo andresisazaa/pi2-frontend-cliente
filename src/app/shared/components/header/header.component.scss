@@ -1,13 +1,13 @@
 .header {
   width: 100%;
-  background-color: #f52f41;
+  background-color: white;
   position: sticky;
-  z-index: 1000;
+  z-index: 1;
   padding: 8px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  height: 60px;
+  height: 40px;
 }
 
 .header__logo {

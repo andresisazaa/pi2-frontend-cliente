@@ -1,2 +1,8 @@
-<p>order-list works!</p>
-<p>LISTADO</p>
+<div class="container">
+  <h1 class="text-center my-5 font-weight-bold">Mis pedidos</h1>
+  <ul class="restaurant-list list-group my-2">
+    <li class="list-group-item" *ngFor="let order of orders">
+      <app-order-list-item [order]="order"></app-order-list-item>
+    </li>
+  </ul>
+</div>

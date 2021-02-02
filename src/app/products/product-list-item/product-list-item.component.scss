@@ -1,6 +1,7 @@
 .product {
   display: flex;
   align-items: center;
+  max-width: 600px;
 }
 
 .product__image-container {
@@ -21,6 +22,7 @@
 
 .product__name {
   font-weight: bold;
+  color: #4f69cb;
 }
 
 .product__price {

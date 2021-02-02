@@ -22,7 +22,9 @@ export class CurrentOrderComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.subscription = this.store
       .pipe(select(productsToOrderSelect))
-      .subscribe((products: OrderItem[]) => (this.products = products));
+      .subscribe((products: OrderItem[]) => {
+        this.products = products       
+      });
   }
 
   ngOnDestroy(): void {

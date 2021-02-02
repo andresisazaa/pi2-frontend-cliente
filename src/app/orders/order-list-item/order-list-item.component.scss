@@ -1,0 +1,18 @@
+.order {
+  display: flex;
+  // padding: 8px;
+  flex-direction: column;
+  cursor: pointer;
+  &__id {
+    font-weight: bold;
+  }
+  &__value {
+    font-weight: bold;
+  }
+  &__status {
+    font-weight: bold;
+  }
+  & span {
+    color: #4f69cb;
+  }
+}

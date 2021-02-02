@@ -1,0 +1,20 @@
+.restaurant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 10px;
+    &__name {
+        text-align: center;
+        margin: 20px auto;
+        font-weight: bolder;
+    }
+
+    &__image {
+        max-width: 150px;
+        width: 100%;
+        display: block;
+        height: auto;
+        margin: 0 auto;
+    }
+}

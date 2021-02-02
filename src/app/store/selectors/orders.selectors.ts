@@ -12,3 +12,9 @@ export const orderSelect = createSelector(
   selectFeature,
   (state: OrdersState) => state.order
 );
+
+export const ordersSelect = createSelector(
+  selectFeature,
+  (state: OrdersState) => state.orders
+);
+

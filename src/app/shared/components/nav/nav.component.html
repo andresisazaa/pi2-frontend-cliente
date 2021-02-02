@@ -1,0 +1,39 @@
+<nav class="nav" [ngClass]="{ 'nav--active': open }">
+  <div class="nav__wrapper">
+    <div class="nav__links-container">
+      <ul class="nav__list__items">
+        <li class="nav__list__item" routerLinkActive="nav__list__item--active">
+            <a routerLink="/restaurantes" class="nav__link">
+              <i class="fa fa-cutlery nav__link__icon"></i>
+              Restaurantes
+            </a>
+          </li>
+        <li class="nav__list__item" routerLinkActive="nav__list__item--active">
+          <a routerLink="/pedidos" class="nav__link">
+            <i class="fa fa-bookmark nav__link__icon"></i>
+            Pedidos
+          </a>
+        </li>
+        <!-- <li class="nav__list__item">
+          <a class="nav__link">
+            <i class="fa fa-user nav__link__icon"></i>
+            Perfil
+          </a>
+        </li> -->
+        <li>
+            <button disabled class="logout__button bg-danger">
+              <i class="fa fa-sign-out nav__link__icon"></i>
+              Cerrar sesión
+            </button>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<button
+  [ngClass]="{ 'nav__button--open': !open }"
+  class="nav__button"
+  (click)="toggleSidebar()"
+>
+  <i class="fa fa-bars pb-1"></i>
+</button>

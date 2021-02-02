@@ -29,3 +29,14 @@ export const fetchRestaurantFailed = createAction(
   '[RESTAURANTES] Obtener restaurante fallido',
   props<{ errorMsg: string }>()
 );
+
+export const searchRestaurant = createAction(
+  '[RESTAURANTES] Buscar restaurante',
+  props<{ query: string }>()
+);
+
+export const searchProductByRestaurant = createAction(
+  '[RESTAURANTES] Buscar productos en restaurante',
+  props<{ query: string }>()
+);
+

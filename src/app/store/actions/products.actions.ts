@@ -27,3 +27,15 @@ export const fetchProductFailed = createAction(
   '[PRODUCTOS] Obtener producto fallido',
   props<{ errorMessage: string }>()
 );
+
+
+export const serachProducts = createAction(
+  '[PRODUCTOS] Buscar productos',
+  props<{ query: string }>()
+);
+
+
+export const selectProduct = createAction(
+  '[PRODUCTOS] Buscar productos',
+  props<{ product: Product }>()
+);

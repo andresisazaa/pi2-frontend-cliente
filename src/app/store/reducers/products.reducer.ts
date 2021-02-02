@@ -4,6 +4,8 @@ import {
   fetchProductsFailed,
   fetchProductSuccess,
   fetchProductFailed,
+  serachProducts,
+  selectProduct,
 } from '../actions/products.actions';
 import { productsInitialState, ProductsState } from '../states/products.state';
 
@@ -24,7 +26,18 @@ const reducer = createReducer(
   on(fetchProductFailed, (state, { errorMessage }) => ({
     ...state,
     error: errorMessage,
-  }))
+  })),
+  on(serachProducts, (state, { query }) => {
+    return {
+      ...state,
+    };
+  }),
+  on(selectProduct, (state, { product }) => {
+    return {
+      ...state,
+      product: product,
+    };
+  })
 );
 
 export function productsReducer(state: ProductsState, action: Action) {

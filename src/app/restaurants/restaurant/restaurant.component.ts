@@ -23,7 +23,7 @@ export class RestaurantComponent implements OnInit {
   ngOnInit(): void {
     this.getRestaurantByURL();
     this.subscribeToRestaurant();
-    this.store.dispatch(fetchProducts());
+    // this.store.dispatch(fetchProducts());
   }
 
   subscribeToRestaurant(): void {

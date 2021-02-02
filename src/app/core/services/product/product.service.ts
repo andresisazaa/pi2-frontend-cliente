@@ -8,8 +8,8 @@ import { Product } from '../../models/product.model';
   providedIn: 'root',
 })
 export class ProductService {
-  private readonly productsUrl = `${environment.backendUrl}/productos`;
-
+  // private readonly productsUrl = `${environment.backendUrl}/productos`;
+  private readonly productsUrl = `http://54.90.19.125:3002/producto`;
   constructor(private httpClient: HttpClient) {}
 
   getProducts(): Observable<Product[]> {

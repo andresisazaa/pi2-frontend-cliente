@@ -12,7 +12,7 @@ const routes: Routes = [
     component: OrdersComponent,
     children: [
       { path: '', component: OrderListComponent },
-      { path: 'mi-orden', component: CurrentOrderComponent },
+      { path: 'mi-pedido', component: CurrentOrderComponent },
       { path: ':id', component: OrderDetailComponent },
     ],
   },
