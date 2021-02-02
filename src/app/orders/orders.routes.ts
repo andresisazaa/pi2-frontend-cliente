@@ -5,6 +5,7 @@ import { OrdersComponent } from './orders/orders.component';
 import { OrderListComponent } from './order-list/order-list.component';
 import { OrderDetailComponent } from './order-detail/order-detail.component';
 import { CurrentOrderComponent } from './current-order/current-order.component';
+import { OrderStatusComponent } from './order-status/order-status.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,12 @@ const routes: Routes = [
     children: [
       { path: '', component: OrderListComponent },
       { path: 'mi-pedido', component: CurrentOrderComponent },
-      { path: ':id', component: OrderDetailComponent },
+      {
+        path: ':id',
+        component: OrderStatusComponent,
+        loadChildren: () =>
+          import('../orders/orders.module').then((m) => m.OrdersModule),
+      },
     ],
   },
 ];
@@ -22,4 +28,4 @@ const routes: Routes = [
   imports: [CommonModule, RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class OrdersRoutingModule {}
+export class OrdersRoutingModule { }

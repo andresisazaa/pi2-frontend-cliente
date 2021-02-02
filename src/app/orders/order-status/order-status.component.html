@@ -2,14 +2,14 @@
     <div class="card-header">
       Estado de tu pedido:
       <span class="font-weight-bolder">
-        {{ order.status }}
+        {{ order.estado }}
       </span>
     </div>
     <div class="card-body">
       <p class="card-text">
-        Tu pedido se encuentra siendo preparada por el restaurante
+        Tu pedido se encuentra siendo preparado por el restaurante
       </p>
-      <button class="btn btn-primary">Ver detalle</button>
+      <button (click)="viewDetail()" class="btn btn-primary">Ver detalle</button>
     </div>
   </div>
   

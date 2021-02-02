@@ -51,7 +51,7 @@ export class ProductDetailComponent implements OnInit {
       productId: this.product.id,
       quantity: quantity,
       value: this.product.price,
-      description: details,
+      detail: details,
     };
     this.store.dispatch(addProductToOrder({ product: productToOrder }));
   }

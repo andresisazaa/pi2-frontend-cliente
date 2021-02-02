@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Store, select } from '@ngrx/store';
+import { Subscription } from 'rxjs';
 import { Order } from 'src/app/core/models/order.model';
+import { State } from 'src/app/store/states/app.state';
+import { orderSelect } from 'src/app/store/selectors/orders.selectors';
+
 
 @Component({
   selector: 'app-order-status',
@@ -7,29 +13,17 @@ import { Order } from 'src/app/core/models/order.model';
   styleUrls: ['./order-status.component.scss'],
 })
 export class OrderStatusComponent implements OnInit {
-  order: Order = {
-    id: 1,
-    products: [
-      {
-        productName: 'Hamburguesa',
-        productId: 1,
-        quantity: 3,
-        value: 60000,
-        description: 'Cualquier cosa',
-      },
-      {
-        productName: 'Hot Dog',
-        productId: 2,
-        quantity: 1,
-        value: 20000,
-        description: 'Cualquier cosa',
-      },
-    ],
-    status: 'En preparación',
-    date: new Date(),
-    value: 40000,
-  };
-  constructor() {}
 
-  ngOnInit(): void {}
+  subscription: Subscription;
+  order: Order;
+
+  constructor(private store: Store<State>, private router: Router) {}
+
+  ngOnInit(): void {
+    this.subscription = this.store
+      .pipe(select(orderSelect))
+      .subscribe((order: Order) => {        
+        this.order = order       
+      });
+  }
 }

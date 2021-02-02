@@ -7,6 +7,7 @@ import { OrderItem } from 'src/app/core/models/order-item.model';
 import { productsToOrderSelect } from 'src/app/store/selectors/orders.selectors';
 import { tap } from 'rxjs/operators';
 import { createOrder } from 'src/app/store/actions/orders.actions';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-current-order',
@@ -17,7 +18,7 @@ export class CurrentOrderComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   products: OrderItem[];
 
-  constructor(private store: Store<State>) {}
+  constructor(private store: Store<State>, private router: Router) {}
 
   ngOnInit(): void {
     this.subscription = this.store
@@ -41,5 +42,6 @@ export class CurrentOrderComponent implements OnInit, OnDestroy {
 
   sendOrder(): void {
     this.store.dispatch(createOrder({ productsToOrder: this.products }));
+    this.router.navigate(['pedidos/mi-orden']);
   }
 }

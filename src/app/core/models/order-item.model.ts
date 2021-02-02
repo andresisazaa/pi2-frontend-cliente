@@ -2,6 +2,6 @@ export interface OrderItem {
   productId: number;
   productName: string;
   quantity: number;
-  description: string;
+  detail: string;
   value: number;
 }

@@ -54,11 +54,12 @@ export class OrdersEffects {
       ofType(createOrder),
       mergeMap(({ productsToOrder }) => {
         const order: Order = {
+          clienteId: 1,
           products: productsToOrder,
           date: new Date(),
         };
         return this.orderService.createOrder(order).pipe(
-          map((orderCreated: Order) =>
+          map((orderCreated: Order) =>          
             createOrderSuccess({ order: orderCreated })
           ),
           catchError((error: string) =>
