@@ -26,7 +26,12 @@ export class OrderService {
   }
 
   getOrderById(orderId: number): Observable<Order> {
-    return this.httpClient.get<any>(`${this.ordersUrl}/${orderId}`);
+    return this.httpClient.get<any>(`${this.ordersUrl}/${orderId}`)
+    .pipe(map(res => ({
+      id: res.id,
+      status: res.estado,
+      value: res.total,
+    })))
   }
 
   createOrder(order: Order): Observable<Order> {
